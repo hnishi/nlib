@@ -6,7 +6,7 @@ int calc( Inp_nishi );  // calc() is empty func. (written in calc.cpp)
 
 int main(int argc, char *argv[]){
   
-  cout<<"Version info. nlib v1.1.1 \n";
+  cout<<"Version info. nlib v1.1.2 \n";
 
 // ##################### ARGUMENT HANDLING ##########################
 // argv[1]: input file
