@@ -1,8 +1,9 @@
 #include"nlib.h"
 
-int calc(){
-	cout<<"Program calc() starts!!!\n";
+int calc( Inp_nishi inp1 ){
+	cout<<"Program calc( inp1 ) starts!!!\n";
 	
+	cout<<inp1.filename <<endl;
 // OUTPUT TRAJECTORIES IN MD0
 	/*string codname1, pdbname1, outname1;
 	char bfcod[200], bfpdb[200], bfout[200];
