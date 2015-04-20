@@ -3,6 +3,7 @@
 using namespace std;
 
 int calc( Inp_nishi );  // calc() is empty func. (written in calc.cpp)
+int search_sel( pdb_nishi &pdb1, string chai, int resn, string atmn, string atomsel);
 
 int main(int argc, char *argv[]){
   
@@ -22,14 +23,14 @@ Inp_nishi inp1( argv[1] );
 
 // CHECK OF pdb_nishi
 	calc( inp1 );  // nothing occur
-	pdb_nishi pdb1("../samp/4wfi_cano.pdb");
+	//pdb_nishi pdb1("../samp/4wfi_cano.pdb");
 	//pdb_nishi pdb1("../samp/1IGT.pdb");
 	//cout<<"search_n resi 3: " << pdb1.search_n(' ', 3) <<endl;
 	//pdb_nishi pdb1("3vg9_all_cut.pdb");
 	//pdb1.center_r();
 	//cout<<"comx_r[0] "<<pdb1.comx_r[0]<<endl;
 
-	pdb1.write_pdb("zzz.pdb");
+	//pdb1.write_pdb("zzz.pdb");
 	//pdb1.disp_line(pdb1.total_atom);
 /*	cout<<"test, rnum[5] = "<<pdb1.rnum[5]<<endl;
 	cout<<"TOTAL ATOM = "<<pdb1.rnum.size()<<endl;
@@ -44,11 +45,15 @@ Inp_nishi inp1( argv[1] );
 // CHECK OF tra_nishi
 	//tra_nishi tra1(inp1.read("CODNAME").c_str(),inp1.read("REFPDBNAME").c_str(),inp1.read("SELECTATOM").c_str());
 	//tra_nishi tra1("../samp/md_pra.cod","../samp/pra.pdb","protein");
-	//tra_nishi tra1("../samp/for_rmsd/traj/md_small.crd","../samp/for_rmsd/traj/crystal_1st.pdb", "mainchain");
+	tra_nishi tra1("../samp/for_rmsd/traj/md_small.crd","../samp/for_rmsd/traj/crystal_1st.pdb", "mainchain");
 	//tra_nishi tra1("../samp/for_rmsd/traj/md_small.crd","../samp/for_rmsd/traj/crystal_1st.pdb");
 	//tra_nishi tra1("samp/md_npt_10.cod","samp/10_min3.pdb",10);
 	//tra_nishi tra1("samp/md_npt_10.cod","samp/md0.out.pdb",1);
-	//cout<<"TOTAL STEP = "<<tra1.total_step<<endl;
+	cout<<"TOTAL STEP = "<<tra1.total_step<<endl;
+	cout<<"TOTAL SEL  = "<<tra1.total_sel<<endl;
+//ATOM   3540  C   SER B 233      -7.877  31.072  -9.717 12.01  0.60
+	int intra_num = search_sel( *tra1.pdb1 , "B", 234 , "N" , "mainchain");
+	cout<<"intra_num = "<<intra_num<<endl;
 	//for(unsigned int i=0;i<tra1.total_step;i++){
 	//for(unsigned int i=tra1.total_step-1;i<tra1.total_step;i++){
 		//cout<<tra1.length_x[i]<<endl;;

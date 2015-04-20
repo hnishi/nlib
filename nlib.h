@@ -88,7 +88,7 @@ public:
 	vector<int> loopnum,num15svw,num15hyd;
 	vector<double> sitime,cputime,totalE,kineticE,temp,potent,rmsf,rmsd;
 	vector<double> cordx,cordy,cordz,length_x,length_y,length_z;
-	unsigned int total_step, total_sel;
+	unsigned int total_step, total_sel; // total_* >= 1
 	pdb_nishi* pdb1;
 	string atom_sel;
 	string cod_name, pdb_name;

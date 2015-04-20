@@ -432,3 +432,4 @@ int pdb_nishi::center_r(){
 
 	return 0;
 }
+
