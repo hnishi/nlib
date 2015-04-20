@@ -45,14 +45,14 @@ Inp_nishi inp1( argv[1] );
 // CHECK OF tra_nishi
 	//tra_nishi tra1(inp1.read("CODNAME").c_str(),inp1.read("REFPDBNAME").c_str(),inp1.read("SELECTATOM").c_str());
 	//tra_nishi tra1("../samp/md_pra.cod","../samp/pra.pdb","protein");
-	tra_nishi tra1("../samp/for_rmsd/traj/md_small.crd","../samp/for_rmsd/traj/crystal_1st.pdb", "mainchain");
+	tra_nishi tra1("../samp/for_rmsd/traj/md_small.crd","../samp/for_rmsd/traj/crystal_1st.pdb", "heavy");
 	//tra_nishi tra1("../samp/for_rmsd/traj/md_small.crd","../samp/for_rmsd/traj/crystal_1st.pdb");
 	//tra_nishi tra1("samp/md_npt_10.cod","samp/10_min3.pdb",10);
 	//tra_nishi tra1("samp/md_npt_10.cod","samp/md0.out.pdb",1);
 	cout<<"TOTAL STEP = "<<tra1.total_step<<endl;
 	cout<<"TOTAL SEL  = "<<tra1.total_sel<<endl;
 //ATOM   3540  C   SER B 233      -7.877  31.072  -9.717 12.01  0.60
-	int intra_num = search_sel( *tra1.pdb1 , "B", 234 , "N" , "mainchain");
+	int intra_num = search_sel( *tra1.pdb1 , "B", 234 , "N" , "heavy");
 	cout<<"intra_num = "<<intra_num<<endl;
 	//for(unsigned int i=0;i<tra1.total_step;i++){
 	//for(unsigned int i=tra1.total_step-1;i<tra1.total_step;i++){
