@@ -1,6 +1,8 @@
-1.0.9
+1.1.0
 
 
+2015.02.09: 1.1.0
+  reading element 
 2015.02.09: 1.0.9
   modify tra_nishi::write_step to write REMARK in output-pdb
   add public variable (string cod_name, pdb_name) into class tra_nishi

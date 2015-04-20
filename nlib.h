@@ -43,6 +43,7 @@ public:
         vector<string> reco,atmn,resn,chai,elem; // pdb elements
 	vector<int> resi_mark; // final internal num. of the residue
 
+	string pdb_name;
 
 	unsigned int total_atom;//anum.size()
 	unsigned int total_residue;//resi_mark.size()
