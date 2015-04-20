@@ -3,7 +3,7 @@
 using namespace std;
 
 int calc( Inp_nishi );  // calc() is empty func. (written in calc.cpp)
-int search_sel( pdb_nishi &pdb1, string chai, int resn, string atmn, string atomsel);
+//int search_sel( pdb_nishi &pdb1, string chai, int resn, string atmn, string atomsel);
 
 int main(int argc, char *argv[]){
   

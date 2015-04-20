@@ -297,3 +297,6 @@ public:
 // select_atom() in tranishi.cpp
 int select_atom( pdb_nishi &pdb1, vector<double> &vec, string &atomsel, int i );
 int select_atom( pdb_nishi &pdb1, double x, double y, double z, vector<double> &vec, string &atomsel, int i );
+
+// search_sel in tranishi.cpp
+int search_sel( pdb_nishi &pdb1, string chai, int resn, string atmn, string atomsel);
