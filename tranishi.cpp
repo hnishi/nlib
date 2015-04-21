@@ -225,7 +225,9 @@ int tra_nishi::write_cod(const char* filename,int stride){//output trajectory in
         fclose(fout);
         return 0;
 }
-
+int tra_nishi::write_cod(const char* filename){
+  return write_cod(filename, 1);
+}
 
 int tra_nishi::fix_step(const char *filename, int n,float fxcell,float fycell,float fzcell){//not yet implemented
 	
@@ -422,6 +424,7 @@ int search_sel( pdb_nishi &pdb1, string chai, int resn, string atmn, string atom
   for(unsigned int w=0; w < pdb1.total_atom; w++){
     int rtrn = select_atom( pdb1, vec, atomsel, w );
     if( rtrn == 0 ){
+      //cout<<pdb1.chai[w]<<" "<<chai<<" "<<pdb1.rnum[w]<<" "<<resn<<" "<<pdb1.atmn[w]<<" "<<atmn<<endl;
       if( pdb1.chai[w] == chai && pdb1.rnum[w] == resn && pdb1.atmn[w] == atmn ){
         intra_num = total_sel;
         check1++;
@@ -432,6 +435,6 @@ int search_sel( pdb_nishi &pdb1, string chai, int resn, string atmn, string atom
   if(check1 > 1){
     cout<<"WARNING in tranishi.cpp: search_sel() detected more than 1 selected atom"<<endl; 
   }
-  cout<<"DEBUG: total_sel = "<<total_sel<<endl;
+  //cout<<"DEBUG: total_sel = "<<total_sel<<endl;
   return intra_num;
 }
